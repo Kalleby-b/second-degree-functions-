@@ -12,7 +12,7 @@ def raizes(a,b,c,delta):
     return{'x1':x1 , 'x2':x2}
 def perg(valor):
     try:
-        z = int(input('what the value of %s:'%valor))
+        z = int(input('Qual o valor de  {}:'.format(valor)))
         return z
     except ValueError:
         z = " "
@@ -23,11 +23,11 @@ resposta = []
 pergunta = None
 pergunta2 = True
 while True:
-    print('my first program in python to calculate a values of x in a quadratic funcion')
+    print('meu primeiro programa a respeito de função de segundo grau')
     print()
     while pergunta2:
         try :
-            a = int(input('wats is the value of a? a must be diferent then 0:'))
+            a = int(input('Qual o valor de a? Lembre-se que ele deve ser diferente de zero!'))
             if a == 0:
                 pergunta2 = True
             else:
@@ -42,7 +42,7 @@ while True:
             z = perg(valor)
             if not(isinstance(z, int) or isinstance(z, float)):
                 print()
-                print("invalid!")
+                print("Numero invalido!!")
                 continue
             else:
                 resposta.append(z)
@@ -54,14 +54,14 @@ while True:
     raizes = raizes(a,b,c,delta['delta'])
     if delta['delta']<0:
         print("- Delta: %.2f"%delta['delta'])
-        print("this function don't have a real result")
+        print("Essa função só possui raizes imaginárias")
     elif delta['delta'] ==0:
         print()
-        print('this function have only one awnser:%.2f'%(raizes['x1']))
+        print('Essa função só tem uma raiz: %.2f'%(raizes['x1']))
     else:
-        print("the possible values of x are:%.2f and %.2f"%(raizes['x1'],raizes['x2']) )
+        print("Os valores de x são :%.2f e %.2f"%(raizes['x1'],raizes['x2']) )
     while True:
-        an = input("you want use the program again? (s/n) ")
+        an = input("Quer calcular outra vez? (s/n) ")
         while an not in("s","n"):
             continue
         cls()
@@ -69,5 +69,5 @@ while True:
     if an == "s":
         continue
     else:
-        print("thanks for using me")
+        print("Obrigado por me usar!!")
         break
